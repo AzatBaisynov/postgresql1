@@ -1,0 +1,41 @@
+create table visitors(
+fio varchar (50) primary key,
+birth_date date not null,
+sexual_identity varchar (1) not null
+);
+
+create table visits(
+visitor varchar (50) references visitors(fio) primary key,
+visiting_time timestamp not null,
+trainer varchar (50) unique not null
+);
+
+insert into visitors(fio, birth_date, sexual_identity ) values ('Alma Balma Calma', '1996-11-18', 'm');
+insert into visits(visitor, visiting_time, trainer ) values ('Alma Balma Calma', '2020-02-08 16:38:40', 'Salma');
+
+
+
+
+Как вы понимаете Git?
+гит является хранилищем, благодаря которому мы получаем хорошую возможность работать в команде, делать откаты и вообще это крутая вещь :)
+
+Для чего нам нужны Базы Данных?
+postgresql имеет ряд преимуществ перед обычными таблицами) например это многофункциональность :) Ну, а так базы данных нужны для хранения данных.
+
+Что такое первичный ключ (Primary Key)?
+первичный ключ является основным свойством характеризующим объект, например его айди. Первичный ключ является unique, а так же not null.
+
+Что такое внешний ключ (Foreign Key)?
+Внешний ключ показывает на праймари кей из главной таблицы
+
+Чем отличаются колонки от строк?
+колонка идет по высоте
+строка по ширине
+
+Чем отличаются таблицы от базы данных?
+функционалом
+база данных состоит из множества таблиц между собой переплетенных
+
+Что такое CRUD операции?
+базовые операции с базами данных.
+создание, чтение, редактирование и удаление
